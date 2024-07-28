@@ -68,7 +68,7 @@ button:hover,
 
 .dark .btn-outline {
 	@apply bg-transparent;
-	@apply text-gray-50;
+	@apply text-white;
 	@apply border-solid border-2 border-gray-50;
 }
 
@@ -84,7 +84,7 @@ button:hover,
 
 .btn-primary {
 	@apply bg-pink-400;
-	@apply text-gray-50;
+	@apply text-white;
 }
 
 .btn-primary:hover {
@@ -104,7 +104,7 @@ button:hover,
 
 .btn-secondary {
 	@apply bg-violet-400;
-	@apply text-gray-50;
+	@apply text-white;
 }
 
 .btn-secondary:hover {
@@ -124,7 +124,7 @@ button:hover,
 
 .btn-disabled {
 	@apply bg-gray-300;
-	@apply text-gray-50;
+	@apply text-white;
 	pointer-events: none;
 }
 

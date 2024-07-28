@@ -1,6 +1,7 @@
 {
 	"name": "pixel-playhouse",
 	"version": "0.0.1",
+	"author": "Anu Sharma",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",

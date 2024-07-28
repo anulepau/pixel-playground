@@ -1,8 +1,18 @@
-# pixel-playground
+# pixel-playhouse
 
-a Web 2.0 experience
+a Web 2.0 experience | (unofficial) virtual landing page for your Pokémon journey
 
-## Developing
+## changelog
+
+TBA
+
+## todo
+- dynamically set theme by Pokémon type and save in localStorage
+- interface skeleton
+- cursor trail
+- features: chatroom (websocket server), Pokémon team selection, journal
+
+## developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
@@ -13,7 +23,7 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Building
+## building
 
 To create a production version of your app:
 

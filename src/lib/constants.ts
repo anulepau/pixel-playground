@@ -63,8 +63,8 @@ export const types: PokemonType[] = [
 	{
 		name: NORMAL,
 		displayName: capitalizeFirstLetter(NORMAL),
-		primaryColor: 'bg-stone-400',
-		secondaryColor: 'bg-gray-200'
+		primaryColor: 'bg-stone-500',
+		secondaryColor: 'bg-gray-400'
 	},
 	{
 		name: FIRE,
@@ -76,7 +76,7 @@ export const types: PokemonType[] = [
 		name: WATER,
 		displayName: capitalizeFirstLetter(WATER),
 		primaryColor: 'bg-cyan-500',
-		secondaryColor: 'bg-teal-200'
+		secondaryColor: 'bg-teal-400'
 	},
 	{
 		name: GRASS,
@@ -88,43 +88,43 @@ export const types: PokemonType[] = [
 		name: FLYING,
 		displayName: capitalizeFirstLetter(FLYING),
 		primaryColor: 'bg-sky-300',
-		secondaryColor: 'bg-slate-400'
+		secondaryColor: 'bg-sky-500'
 	},
 	{
 		name: BUG,
 		displayName: capitalizeFirstLetter(BUG),
-		primaryColor: 'bg-lime-300',
+		primaryColor: 'bg-lime-400',
 		secondaryColor: 'bg-yellow-500'
 	},
 	{
 		name: ELECTRIC,
 		displayName: capitalizeFirstLetter(ELECTRIC),
-		primaryColor: 'bg-yellow-300',
-		secondaryColor: 'bg-slate-600'
+		primaryColor: 'bg-yellow-500',
+		secondaryColor: 'bg-amber-400'
 	},
 	{
 		name: ROCK,
 		displayName: capitalizeFirstLetter(ROCK),
-		primaryColor: 'bg-stone-600',
-		secondaryColor: 'bg-lime-200'
+		primaryColor: 'bg-stone-500',
+		secondaryColor: 'bg-lime-600'
 	},
 	{
 		name: GROUND,
 		displayName: capitalizeFirstLetter(GROUND),
 		primaryColor: 'bg-yellow-600',
-		secondaryColor: 'bg-stone-500'
+		secondaryColor: 'bg-stone-400'
 	},
 	{
 		name: FIGHTING,
 		displayName: capitalizeFirstLetter(FIGHTING),
-		primaryColor: 'bg-amber-800',
-		secondaryColor: 'bg-blue-200'
+		primaryColor: 'bg-amber-700',
+		secondaryColor: 'bg-blue-600'
 	},
 	{
 		name: PSYCHIC,
 		displayName: capitalizeFirstLetter(PSYCHIC),
 		primaryColor: 'bg-pink-600',
-		secondaryColor: 'bg-purple-500'
+		secondaryColor: 'bg-fuchsia-400'
 	},
 	{
 		name: GHOST,
@@ -135,26 +135,26 @@ export const types: PokemonType[] = [
 	{
 		name: DARK,
 		displayName: capitalizeFirstLetter(DARK),
-		primaryColor: 'bg-indigo-900',
-		secondaryColor: 'bg-zinc-400'
+		primaryColor: 'bg-indigo-700',
+		secondaryColor: 'bg-zinc-600'
 	},
 	{
 		name: DRAGON,
 		displayName: capitalizeFirstLetter(DRAGON),
-		primaryColor: 'bg-indigo-500',
-		secondaryColor: 'bg-indigo-300'
+		primaryColor: 'bg-indigo-400',
+		secondaryColor: 'bg-orange-400'
 	},
 	{
 		name: STEEL,
 		displayName: capitalizeFirstLetter(STEEL),
-		primaryColor: 'bg-slate-400',
-		secondaryColor: 'bg-blue-300'
+		primaryColor: 'bg-slate-500',
+		secondaryColor: 'bg-blue-400'
 	},
 	{
 		name: ICE,
 		displayName: capitalizeFirstLetter(ICE),
 		primaryColor: 'bg-blue-300',
-		secondaryColor: 'bg-indigo-400'
+		secondaryColor: 'bg-indigo-500'
 	},
 	{
 		name: FAIRY,
