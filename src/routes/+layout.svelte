@@ -1,11 +1,17 @@
 <script lang="ts">
-	import { theme } from '$lib/stores';
-	import '../styles/app.scss';
-</script>
+	import '../styles/app.css';
+	import { browser } from '$app/environment';
 
-<svelte:head>
-	<meta name="color-scheme" content={$theme == 'system' ? 'light dark' : $theme} />
-	<link rel="stylesheet" href={`src/styles/theme/${$theme}.scss`} />
-</svelte:head>
+	if (browser) {
+		if (
+			localStorage.theme === 'dark' ||
+			(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+		) {
+			document.documentElement.classList.add('dark');
+		} else {
+			document.documentElement.classList.remove('dark');
+		}
+	}
+</script>
 
 <slot />

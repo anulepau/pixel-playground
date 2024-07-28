@@ -1,39 +1,28 @@
 <script>
-	import ThemeSwitch from '$lib/components/ThemeSwitch.svelte';
+	import { displayTypesList } from '$lib/constants';
+	import ThemeSelector from '$lib/components/ThemeSelector.svelte';
+	import PokemonType from '$lib/components/PokemonType.svelte';
 </script>
 
-<div class="home">
-	<span>hello world</span>
-	<ThemeSwitch />
-	<a class="exit-btn" href="/">Exit</a>
+<div class="flex flex-col gap-4 p-4">
+	<section class="flex flex-row gap-4 items-end">
+		<span class="text-2xl font-semibold">Style Guide</span>
+		<ThemeSelector />
+	</section>
+	<section class="flex flex-row gap-4">
+		<div class="flex flex-col gap-4 p-4 rounded-lg style-card">
+			<a class="btn" href="/">Exit</a>
+			<a class="btn btn-outline" href="/">Exit Outline</a>
+			<a class="btn btn-primary" href="/">Exit Primary</a>
+			<a class="btn btn-primary-outline" href="/">Exit Primary Outline</a>
+			<a class="btn btn-secondary" href="/">Exit Secondary</a>
+			<a class="btn btn-secondary-outline" href="/">Exit Secondary Outline</a>
+			<a class="btn btn-disabled" href="/">Exit Disabled</a>
+		</div>
+		<div class="flex flex-col gap-4 p-4 rounded-lg style-card">
+			{#each displayTypesList as type}
+				<PokemonType {type} />
+			{/each}
+		</div>
+	</section>
 </div>
-
-<style lang="scss">
-	@import '../../styles/colors.scss';
-
-	.home {
-		display: flex;
-		width: 100%;
-		height: 100vh;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		gap: 1rem;
-	}
-
-	.exit-btn {
-		background-color: $pp-pink-300;
-		border: none;
-		border-radius: 0.5rem;
-		padding: 0.25rem 1.5rem;
-		color: white;
-		font-size: 18px;
-		text-decoration: none;
-
-		&:hover {
-			transition: 0.2s;
-			background-color: $pp-pink-100;
-			cursor: pointer;
-		}
-	}
-</style>
