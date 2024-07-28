@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { types } from '$lib/constants';
 	import ThemeSelector from '$lib/components/ThemeSelector.svelte';
 	import PokemonType from '$lib/components/PokemonType.svelte';

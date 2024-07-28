@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<div class="flex w-full h-screen justify-center items-center">
+<div class="flex flex-row w-full h-screen justify-center items-center">
 	<div class="px-4 py-5 rounded-xl bg-violet-300">
 		<a class="enter-btn btn btn-primary" data-sveltekit-preload-data="tap" href="/home"> Enter </a>
 	</div>
