@@ -1,8 +1,10 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
+	import { typesTable } from '$lib/constants';
 
 	let darkMode: boolean = false;
 	let selected: string = 'system';
+	let type: string = 'fairy';
 
 	if (browser) {
 		if (localStorage.theme && localStorage.theme !== '') {
@@ -39,8 +41,18 @@
 	}
 </script>
 
-<select bind:value={selected} on:change={(e) => handleSwitchDarkMode(e)}>
-	<option value="system">System</option>
-	<option value="light">Light</option>
-	<option value="dark">Dark</option>
-</select>
+<div class="flex flex-row gap-4">
+	<select bind:value={selected} on:change={(e) => handleSwitchDarkMode(e)}>
+		<option value="system">System</option>
+		<option value="light">Light</option>
+		<option value="dark">Dark</option>
+	</select>
+
+	<select bind:value={type}>
+		<option value={typesTable.NORMAL}>Normal</option>
+		<option value={typesTable.FIRE}>Fire</option>
+		<option value={typesTable.WATER}>Water</option>
+		<option value={typesTable.GRASS}>Grass</option>
+		<option value={typesTable.FAIRY}>Fairy</option>
+	</select>
+</div>

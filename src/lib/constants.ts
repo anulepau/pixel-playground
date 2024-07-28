@@ -1,4 +1,5 @@
 import { capitalizeFirstLetter } from '../utils/helpers';
+import type { TypesTable, PokemonType } from '../types';
 
 // Types
 export const NORMAL = 'normal';
@@ -12,6 +13,8 @@ export const ROCK = 'rock';
 export const GROUND = 'ground';
 export const FIGHTING = 'fighting';
 export const PSYCHIC = 'psychic';
+export const GHOST = 'ghost';
+export const DARK = 'dark';
 export const DRAGON = 'dragon';
 export const STEEL = 'steel';
 export const ICE = 'ice';
@@ -28,69 +31,137 @@ export const typesList: string[] = [
 	GROUND,
 	FIGHTING,
 	PSYCHIC,
+	GHOST,
+	DARK,
 	DRAGON,
 	STEEL,
 	ICE,
 	FAIRY
 ];
 
-export const displayTypesList: string[] = typesList.map((type) => capitalizeFirstLetter(type));
+export const typesTable: TypesTable = {
+	NORMAL,
+	FIRE,
+	WATER,
+	GRASS,
+	FLYING,
+	BUG,
+	ELECTRIC,
+	ROCK,
+	GROUND,
+	FIGHTING,
+	PSYCHIC,
+	GHOST,
+	DARK,
+	DRAGON,
+	STEEL,
+	ICE,
+	FAIRY
+};
 
-export const typesTheme = [
+export const types: PokemonType[] = [
 	{
 		name: NORMAL,
-		color: ''
+		displayName: capitalizeFirstLetter(NORMAL),
+		primaryColor: 'bg-stone-400',
+		secondaryColor: 'bg-gray-200'
 	},
 	{
 		name: FIRE,
-		color: ''
+		displayName: capitalizeFirstLetter(FIRE),
+		primaryColor: 'bg-red-600',
+		secondaryColor: 'bg-orange-400'
 	},
 	{
 		name: WATER,
-		color: ''
+		displayName: capitalizeFirstLetter(WATER),
+		primaryColor: 'bg-cyan-500',
+		secondaryColor: 'bg-teal-200'
+	},
+	{
+		name: GRASS,
+		displayName: capitalizeFirstLetter(GRASS),
+		primaryColor: 'bg-green-500',
+		secondaryColor: 'bg-rose-400'
 	},
 	{
 		name: FLYING,
-		color: ''
+		displayName: capitalizeFirstLetter(FLYING),
+		primaryColor: 'bg-sky-300',
+		secondaryColor: 'bg-slate-400'
 	},
 	{
 		name: BUG,
-		color: ''
+		displayName: capitalizeFirstLetter(BUG),
+		primaryColor: 'bg-lime-300',
+		secondaryColor: 'bg-yellow-500'
 	},
 	{
 		name: ELECTRIC,
-		color: ''
+		displayName: capitalizeFirstLetter(ELECTRIC),
+		primaryColor: 'bg-yellow-300',
+		secondaryColor: 'bg-slate-600'
 	},
 	{
 		name: ROCK,
-		color: ''
+		displayName: capitalizeFirstLetter(ROCK),
+		primaryColor: 'bg-stone-600',
+		secondaryColor: 'bg-lime-200'
 	},
 	{
 		name: GROUND,
-		color: ''
+		displayName: capitalizeFirstLetter(GROUND),
+		primaryColor: 'bg-yellow-600',
+		secondaryColor: 'bg-stone-500'
 	},
 	{
 		name: FIGHTING,
-		color: ''
+		displayName: capitalizeFirstLetter(FIGHTING),
+		primaryColor: 'bg-amber-800',
+		secondaryColor: 'bg-blue-200'
 	},
 	{
 		name: PSYCHIC,
-		color: ''
+		displayName: capitalizeFirstLetter(PSYCHIC),
+		primaryColor: 'bg-pink-600',
+		secondaryColor: 'bg-purple-500'
+	},
+	{
+		name: GHOST,
+		displayName: capitalizeFirstLetter(GHOST),
+		primaryColor: 'bg-violet-700',
+		secondaryColor: 'bg-purple-400'
+	},
+	{
+		name: DARK,
+		displayName: capitalizeFirstLetter(DARK),
+		primaryColor: 'bg-indigo-900',
+		secondaryColor: 'bg-zinc-400'
 	},
 	{
 		name: DRAGON,
-		color: ''
+		displayName: capitalizeFirstLetter(DRAGON),
+		primaryColor: 'bg-indigo-500',
+		secondaryColor: 'bg-indigo-300'
 	},
 	{
 		name: STEEL,
-		color: ''
+		displayName: capitalizeFirstLetter(STEEL),
+		primaryColor: 'bg-slate-400',
+		secondaryColor: 'bg-blue-300'
 	},
 	{
 		name: ICE,
-		color: ''
+		displayName: capitalizeFirstLetter(ICE),
+		primaryColor: 'bg-blue-300',
+		secondaryColor: 'bg-indigo-400'
 	},
 	{
 		name: FAIRY,
-		color: ''
+		displayName: capitalizeFirstLetter(FAIRY),
+		primaryColor: 'bg-pink-400',
+		secondaryColor: 'bg-violet-400'
 	}
 ];
+
+export const displayTypesList: string[] = types.map((type) => type.displayName);

@@ -1,5 +1,5 @@
 <script>
-	import { displayTypesList } from '$lib/constants';
+	import { types } from '$lib/constants';
 	import ThemeSelector from '$lib/components/ThemeSelector.svelte';
 	import PokemonType from '$lib/components/PokemonType.svelte';
 </script>
@@ -20,8 +20,12 @@
 			<a class="btn btn-disabled" href="/">Exit Disabled</a>
 		</div>
 		<div class="flex flex-col gap-4 p-4 rounded-lg style-card">
-			{#each displayTypesList as type}
-				<PokemonType {type} />
+			{#each types as type}
+				<PokemonType
+					typeName={type.displayName}
+					primaryColor={type.primaryColor}
+					secondaryColor={type.secondaryColor}
+				/>
 			{/each}
 		</div>
 	</section>
