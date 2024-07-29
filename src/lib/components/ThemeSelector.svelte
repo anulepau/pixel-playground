@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import { typesTable } from '$lib/constants';
+	import { pokemonTypesList } from '$lib/constants';
 
 	let darkMode: boolean = false;
 	let selected: string = 'system';
-	let type: string = 'fairy';
+	let type: string = 'Fairy';
 
 	if (browser) {
 		if (localStorage.theme && localStorage.theme !== '') {
@@ -49,10 +49,8 @@
 	</select>
 
 	<select bind:value={type}>
-		<option value={typesTable.NORMAL}>Normal</option>
-		<option value={typesTable.FIRE}>Fire</option>
-		<option value={typesTable.WATER}>Water</option>
-		<option value={typesTable.GRASS}>Grass</option>
-		<option value={typesTable.FAIRY}>Fairy</option>
+		{#each pokemonTypesList as pokemonType}
+			<option value={pokemonType.displayName}>{pokemonType.displayName}</option>
+		{/each}
 	</select>
 </div>

@@ -7,6 +7,7 @@ a Web 2.0 experience | (unofficial) virtual landing page for your Pokémon journ
 TBA
 
 ## todo
+
 - dynamically set theme by Pokémon type and save in localStorage
 - interface skeleton
 - cursor trail
