@@ -6,12 +6,20 @@ a Web 2.0 experience | (unofficial) virtual landing page for your Pokémon journ
 
 TBA
 
-## todo
+## main todo
 
-- dynamically set theme by Pokémon type and save in localStorage
+- component library (button, dropdown, label/input, headings, tooltips)
 - interface skeleton
 - cursor trail
 - features: chatroom (websocket server), Pokémon team selection, journal
+
+## other todo
+
+- style dropdown (select > option)
+
+## issues
+
+- primary / secondary outline buttons reset colors in darkmode
 
 ## developing
 

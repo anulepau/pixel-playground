@@ -14,11 +14,13 @@ export type PokemonTypeListItem = {
 			secondaryColor: string;
 			secondaryHoverColor: string;
 		};
-		border: {
+		ring: {
+			primaryFocusColor: string;
+			secondaryFocusColor: string;
+		};
+		accent: {
 			primaryColor: string;
-			primaryHoverColor: string;
 			secondaryColor: string;
-			secondaryHoverColor: string;
 		};
 	};
 };
@@ -45,6 +47,14 @@ export type PokemonTypes = {
 				primaryHoverColor: string;
 				secondaryColor: string;
 				secondaryHoverColor: string;
+			};
+			ring: {
+				primaryFocusColor: string;
+				secondaryFocusColor: string;
+			};
+			accent: {
+				primaryColor: string;
+				secondaryColor: string;
 			};
 		};
 	};

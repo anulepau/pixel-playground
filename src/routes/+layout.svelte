@@ -1,15 +1,17 @@
 <script lang="ts">
-	import '../styles/app.css';
 	import { browser } from '$app/environment';
+	import { DARK_THEME } from '$lib/constants';
+	import '../styles/app.css';
 
 	if (browser) {
 		if (
-			localStorage.theme === 'dark' ||
-			(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+			localStorage.theme === DARK_THEME ||
+			(!('theme' in localStorage) &&
+				window.matchMedia(`(prefers-color-scheme: DARK_THEME)`).matches)
 		) {
-			document.documentElement.classList.add('dark');
+			document.documentElement.classList.add(DARK_THEME);
 		} else {
-			document.documentElement.classList.remove('dark');
+			document.documentElement.classList.remove(DARK_THEME);
 		}
 	}
 </script>

@@ -3,38 +3,75 @@
 @tailwind components;
 @tailwind utilities;
 
-body,
-section,
-article,
-header,
-div,
-button,
-label,
-input,
-p,
-span,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: 'Playpen Sans', cursive;
-	font-optical-sizing: auto;
-	font-weight: normal;
-	font-style: normal;
-	@apply text-base;
-}
-
 @layer base {
+	:root {
+		@apply accent-slate-600;
+	}
+
+	::selection {
+		@apply bg-blue-300;
+		@apply text-black;
+	}
+
+	body,
+	section,
+	article,
+	header,
+	div,
+	button,
+	input,
+	p,
+	span,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: 'Playpen Sans', cursive;
+		font-optical-sizing: auto;
+		font-weight: normal;
+		font-style: normal;
+		@apply text-base;
+	}
+
 	select {
-		@apply border-solid border border-gray-900 rounded-md;
+		@apply border border-solid border-slate-900 rounded-md;
+		@apply py-1 px-2;
+		@apply focus:outline-slate-600 active:outline-slate-600;
+	}
+
+	label {
+		@apply text-sm;
+	}
+
+	input {
+		@apply accent-slate-600;
+		transition: 0.2s;
+	}
+
+	.input-text {
+		@apply border border-solid border-slate-300 rounded-md;
+		@apply py-1 px-2;
+		@apply focus:ring-2 focus:ring-offset-1;
+		@apply focus:ring-slate-400;
+		outline: none;
+	}
+
+	input[type='checkbox'],
+	input[type='radio'] {
+		transform: scale(1.25);
+	}
+
+	input[type='checkbox'] + label {
+		@apply text-base;
+		@apply pl-1;
 	}
 
 	button,
 	.btn {
-		@apply bg-gray-200;
-		@apply text-gray-900;
+		@apply bg-slate-200;
+		@apply text-slate-900;
 		border: 2px solid transparent;
 		border-radius: 0.5rem;
 		padding: 0.25rem 0.75rem;
@@ -46,7 +83,7 @@ h6 {
 
 	button:hover,
 	.btn:hover {
-		@apply bg-gray-400;
+		@apply bg-slate-400;
 		transition: 0.2s;
 		cursor: pointer;
 	}
@@ -58,27 +95,27 @@ h6 {
 
 	.btn-outline {
 		@apply bg-transparent;
-		@apply text-gray-900;
-		@apply border-solid border-2 border-gray-900;
+		@apply text-slate-900;
+		@apply border-2 border-solid border-slate-900;
 	}
 
 	.btn-outline:hover {
-		@apply bg-gray-900;
+		@apply bg-slate-900;
 		@apply text-white;
 	}
 
 	.btn-disabled {
-		@apply bg-gray-300;
+		@apply bg-slate-300;
 		@apply text-white;
 		pointer-events: none;
 	}
 
 	.style-card {
-		@apply border border-solid border-gray-300;
+		@apply border border-solid border-slate-300;
 	}
 
 	.style-card:hover {
-		@apply border-gray-900;
+		@apply border-slate-900;
 		transition: 0.2s;
 	}
 }
@@ -91,16 +128,21 @@ h6 {
 		@apply text-white;
 	}
 
+	.dark input[type='text'] {
+		@apply text-white;
+		@apply bg-transparent;
+	}
+
 	.dark select {
 		@apply bg-transparent;
-		@apply text-gray-50;
-		@apply border-solid border border-gray-50 rounded-md;
+		@apply text-slate-50;
+		@apply border border-solid border-slate-50 rounded-md;
 	}
 
 	.dark .btn-outline {
 		@apply bg-transparent;
 		@apply text-white;
-		@apply border-solid border-2 border-gray-50;
+		@apply border-2 border-solid border-slate-50;
 	}
 
 	.dark .btn-outline:hover {
@@ -109,16 +151,16 @@ h6 {
 	}
 
 	.dark .style-card {
-		@apply border border-solid border-gray-700;
+		@apply border border-solid border-slate-700;
 	}
 
 	.dark .style-card:hover {
-		@apply border-gray-50;
+		@apply border-slate-50;
 	}
 
 	.dark .btn-disabled {
-		@apply bg-gray-700;
-		@apply text-gray-500;
+		@apply bg-slate-700;
+		@apply text-slate-500;
 		pointer-events: none;
 	}
 }

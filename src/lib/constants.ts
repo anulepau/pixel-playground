@@ -1,6 +1,11 @@
 import { capitalizeFirstLetter } from '../utils/helpers';
 import type { PokemonTypes, PokemonTypeListItem } from '../types';
 
+// Themes
+export const SYSTEM_THEME = 'system';
+export const LIGHT_THEME = 'light';
+export const DARK_THEME = 'dark';
+
 // Types
 export const NORMAL = 'normal';
 export const FIRE = 'fire';
@@ -19,6 +24,7 @@ export const DRAGON = 'dragon';
 export const STEEL = 'steel';
 export const ICE = 'ice';
 export const FAIRY = 'fairy';
+export const UNSELECTED = 'unselected';
 
 export const NORMAL_TYPE = {
 	name: NORMAL,
@@ -37,10 +43,18 @@ export const NORMAL_TYPE = {
 			secondaryHoverColor: 'hover:text-gray-500'
 		},
 		border: {
-			primaryColor: 'stone-500',
-			primaryHoverColor: 'hover:stone-600',
-			secondaryColor: 'gray-400',
-			secondaryHoverColor: 'hover:gray-500'
+			primaryColor: 'border-stone-500',
+			primaryHoverColor: 'hover:bg-stone-500',
+			secondaryColor: 'border-gray-400',
+			secondaryHoverColor: 'hover:bg-gray-400'
+		},
+		ring: {
+			primaryFocusColor: 'focus:ring-stone-500',
+			secondaryFocusColor: 'focus:ring-gray-400'
+		},
+		accent: {
+			primaryColor: 'accent-stone-500',
+			secondaryColor: 'accent-gray-400'
 		}
 	}
 };
@@ -63,9 +77,17 @@ export const FIRE_TYPE = {
 		},
 		border: {
 			primaryColor: 'border-red-600',
-			primaryHoverColor: 'hover:border-red-700',
+			primaryHoverColor: 'hover:bg-red-600',
 			secondaryColor: 'border-orange-400',
-			secondaryHoverColor: 'hover:border-orange-500'
+			secondaryHoverColor: 'hover:bg-orange-400'
+		},
+		ring: {
+			primaryFocusColor: 'focus:ring-red-600',
+			secondaryFocusColor: 'focus:ring-orange-400'
+		},
+		accent: {
+			primaryColor: 'accent-red-600',
+			secondaryColor: 'accent-orange-400'
 		}
 	}
 };
@@ -88,9 +110,17 @@ export const WATER_TYPE = {
 		},
 		border: {
 			primaryColor: 'border-cyan-500',
-			primaryHoverColor: 'hover:border-cyan-600',
+			primaryHoverColor: 'hover:bg-cyan-500',
 			secondaryColor: 'border-teal-400',
-			secondaryHoverColor: 'hover:border-teal-500'
+			secondaryHoverColor: 'hover:bg-teal-400'
+		},
+		ring: {
+			primaryFocusColor: 'focus:ring-cyan-500',
+			secondaryFocusColor: 'focus:ring-teal-400'
+		},
+		accent: {
+			primaryColor: 'accent-cyan-500',
+			secondaryColor: 'accent-teal-400'
 		}
 	}
 };
@@ -113,9 +143,17 @@ export const GRASS_TYPE = {
 		},
 		border: {
 			primaryColor: 'border-green-500',
-			primaryHoverColor: 'hover:border-green-600',
+			primaryHoverColor: 'hover:bg-green-500',
 			secondaryColor: 'border-rose-400',
-			secondaryHoverColor: 'hover:border-rose-500'
+			secondaryHoverColor: 'hover:bg-rose-400'
+		},
+		ring: {
+			primaryFocusColor: 'focus:ring-green-500',
+			secondaryFocusColor: 'focus:ring-rose-400'
+		},
+		accent: {
+			primaryColor: 'accent-green-500',
+			secondaryColor: 'accent-rose-400'
 		}
 	}
 };
@@ -138,9 +176,17 @@ export const FLYING_TYPE = {
 		},
 		border: {
 			primaryColor: 'border-sky-300',
-			primaryHoverColor: 'hover:border-sky-300',
+			primaryHoverColor: 'hover:bg-sky-300',
 			secondaryColor: 'border-sky-500',
-			secondaryHoverColor: 'hover:border-sky-500'
+			secondaryHoverColor: 'hover:bg-sky-500'
+		},
+		ring: {
+			primaryFocusColor: 'focus:ring-sky-300',
+			secondaryFocusColor: 'focus:ring-sky-500'
+		},
+		accent: {
+			primaryColor: 'accent-sky-300',
+			secondaryColor: 'accent-sky-500'
 		}
 	}
 };
@@ -163,9 +209,17 @@ export const BUG_TYPE = {
 		},
 		border: {
 			primaryColor: 'border-lime-400',
-			primaryHoverColor: 'hover:border-lime-500',
+			primaryHoverColor: 'hover:bg-lime-400',
 			secondaryColor: 'border-yellow-500',
-			secondaryHoverColor: 'hover:border-yellow-600'
+			secondaryHoverColor: 'hover:bg-yellow-500'
+		},
+		ring: {
+			primaryFocusColor: 'focus:ring-lime-400',
+			secondaryFocusColor: 'focus:ring-yellow-500'
+		},
+		accent: {
+			primaryColor: 'accent-lime-400',
+			secondaryColor: 'accent-yellow-500'
 		}
 	}
 };
@@ -175,22 +229,30 @@ export const ELECTRIC_TYPE = {
 	displayName: capitalizeFirstLetter(ELECTRIC),
 	styles: {
 		bg: {
-			primaryColor: 'bg-yellow-500',
-			primaryHoverColor: 'hover:bg-yellow-600',
+			primaryColor: 'bg-yellow-400',
+			primaryHoverColor: 'hover:bg-yellow-500',
 			secondaryColor: 'bg-amber-400',
 			secondaryHoverColor: 'hover:bg-amber-500'
 		},
 		text: {
-			primaryColor: 'text-yellow-500',
-			primaryHoverColor: 'hover:text-yellow-600',
+			primaryColor: 'text-yellow-400',
+			primaryHoverColor: 'hover:text-yellow-500',
 			secondaryColor: 'text-amber-400',
 			secondaryHoverColor: 'hover:text-amber-500'
 		},
 		border: {
-			primaryColor: 'border-yellow-500',
-			primaryHoverColor: 'hover:border-yellow-600',
+			primaryColor: 'border-yellow-400',
+			primaryHoverColor: 'hover:bg-yellow-400',
 			secondaryColor: 'border-amber-400',
-			secondaryHoverColor: 'hover:border-amber-500'
+			secondaryHoverColor: 'hover:bg-amber-400'
+		},
+		ring: {
+			primaryFocusColor: 'focus:ring-yellow-400',
+			secondaryFocusColor: 'focus:ring-amber-400'
+		},
+		accent: {
+			primaryColor: 'accent-yellow-400',
+			secondaryColor: 'accent-amber-400'
 		}
 	}
 };
@@ -213,9 +275,17 @@ export const ROCK_TYPE = {
 		},
 		border: {
 			primaryColor: 'border-stone-500',
-			primaryHoverColor: 'hover:border-stone-600',
+			primaryHoverColor: 'hover:bg-stone-500',
 			secondaryColor: 'border-lime-600',
-			secondaryHoverColor: 'hover:border-lime-700'
+			secondaryHoverColor: 'hover:bg-lime-600'
+		},
+		ring: {
+			primaryFocusColor: 'focus:ring-stone-500',
+			secondaryFocusColor: 'focus:ring-lime-600'
+		},
+		accent: {
+			primaryColor: 'accent-stone-500',
+			secondaryColor: 'accent-lime-600'
 		}
 	}
 };
@@ -238,9 +308,17 @@ export const GROUND_TYPE = {
 		},
 		border: {
 			primaryColor: 'border-yellow-600',
-			primaryHoverColor: 'hover:border-yellow-700',
+			primaryHoverColor: 'hover:bg-yellow-600',
 			secondaryColor: 'border-stone-400',
-			secondaryHoverColor: 'hover:border-stone-500'
+			secondaryHoverColor: 'hover:bg-stone-400'
+		},
+		ring: {
+			primaryFocusColor: 'focus:ring-yellow-600',
+			secondaryFocusColor: 'focus:ring-stone-400'
+		},
+		accent: {
+			primaryColor: 'accent-yellow-600',
+			secondaryColor: 'accent-stone-400'
 		}
 	}
 };
@@ -263,9 +341,17 @@ export const FIGHTING_TYPE = {
 		},
 		border: {
 			primaryColor: 'border-amber-700',
-			primaryHoverColor: 'hover:border-amber-800',
+			primaryHoverColor: 'hover:bg-amber-700',
 			secondaryColor: 'border-blue-600',
-			secondaryHoverColor: 'hover:border-blue-700'
+			secondaryHoverColor: 'hover:bg-blue-600'
+		},
+		ring: {
+			primaryFocusColor: 'focus:ring-amber-700',
+			secondaryFocusColor: 'focus:ring-blue-600'
+		},
+		accent: {
+			primaryColor: 'accent-amber-700',
+			secondaryColor: 'accent-blue-600'
 		}
 	}
 };
@@ -288,9 +374,17 @@ export const PSYCHIC_TYPE = {
 		},
 		border: {
 			primaryColor: 'border-pink-600',
-			primaryHoverColor: 'hover:border-pink-700',
+			primaryHoverColor: 'hover:bg-pink-600',
 			secondaryColor: 'border-fuchsia-400',
-			secondaryHoverColor: 'hover:border-fuchsia-500'
+			secondaryHoverColor: 'hover:bg-fuchsia-400'
+		},
+		ring: {
+			primaryFocusColor: 'focus:ring-pink-600',
+			secondaryFocusColor: 'focus:ring-fuchsia-400'
+		},
+		accent: {
+			primaryColor: 'accent-pink-600',
+			secondaryColor: 'accent-fuchsia-400'
 		}
 	}
 };
@@ -313,9 +407,17 @@ export const GHOST_TYPE = {
 		},
 		border: {
 			primaryColor: 'border-violet-700',
-			primaryHoverColor: 'hover:border-violet-800',
+			primaryHoverColor: 'hover:bg-violet-700',
 			secondaryColor: 'border-purple-400',
-			secondaryHoverColor: 'hover:border-purple-500'
+			secondaryHoverColor: 'hover:bg-purple-400'
+		},
+		ring: {
+			primaryFocusColor: 'focus:ring-violet-700',
+			secondaryFocusColor: 'focus:ring-purple-400'
+		},
+		accent: {
+			primaryColor: 'accent-violet-700',
+			secondaryColor: 'accent-purple-400'
 		}
 	}
 };
@@ -338,9 +440,17 @@ export const DARK_TYPE = {
 		},
 		border: {
 			primaryColor: 'border-indigo-700',
-			primaryHoverColor: 'hover:border-indigo-800',
+			primaryHoverColor: 'hover:bg-indigo-700',
 			secondaryColor: 'border-zinc-600',
-			secondaryHoverColor: 'hover:border-zinc-700'
+			secondaryHoverColor: 'hover:bg-zinc-600'
+		},
+		ring: {
+			primaryFocusColor: 'focus:ring-indigo-700',
+			secondaryFocusColor: 'focus:ring-zinc-600'
+		},
+		accent: {
+			primaryColor: 'accent-indigo-700',
+			secondaryColor: 'accent-zinc-600'
 		}
 	}
 };
@@ -363,9 +473,17 @@ export const DRAGON_TYPE = {
 		},
 		border: {
 			primaryColor: 'border-indigo-400',
-			primaryHoverColor: 'hover:border-indigo-500',
-			secondaryColor: 'border-range-400',
-			secondaryHoverColor: 'hover:border-orange-500'
+			primaryHoverColor: 'hover:bg-indigo-400',
+			secondaryColor: 'border-orange-400',
+			secondaryHoverColor: 'hover:bg-orange-400'
+		},
+		ring: {
+			primaryFocusColor: 'focus:ring-indigo-400',
+			secondaryFocusColor: 'focus:ring-orange-400'
+		},
+		accent: {
+			primaryColor: 'accent-indigo-400',
+			secondaryColor: 'accent-orange-400'
 		}
 	}
 };
@@ -388,9 +506,17 @@ export const STEEL_TYPE = {
 		},
 		border: {
 			primaryColor: 'border-slate-500',
-			primaryHoverColor: 'hover:border-slate-600',
+			primaryHoverColor: 'hover:bg-slate-500',
 			secondaryColor: 'border-blue-400',
-			secondaryHoverColor: 'hover:border-blue-500'
+			secondaryHoverColor: 'hover:bg-blue-400'
+		},
+		ring: {
+			primaryFocusColor: 'focus:ring-slate-500',
+			secondaryFocusColor: 'focus:ring-blue-400'
+		},
+		accent: {
+			primaryColor: 'accent-slate-500',
+			secondaryColor: 'accent-blue-400'
 		}
 	}
 };
@@ -413,9 +539,17 @@ export const ICE_TYPE = {
 		},
 		border: {
 			primaryColor: 'border-blue-300',
-			primaryHoverColor: 'hover:border-blue-400',
+			primaryHoverColor: 'hover:bg-blue-300',
 			secondaryColor: 'border-indigo-500',
-			secondaryHoverColor: 'hover:border-indigo-600'
+			secondaryHoverColor: 'hover:bg-indigo-500'
+		},
+		ring: {
+			primaryFocusColor: 'focus:ring-blue-300',
+			secondaryFocusColor: 'focus:ring-indigo-500'
+		},
+		accent: {
+			primaryColor: 'accent-blue-300',
+			secondaryColor: 'accent-indigo-500'
 		}
 	}
 };
@@ -438,9 +572,50 @@ export const FAIRY_TYPE = {
 		},
 		border: {
 			primaryColor: 'border-pink-400',
-			primaryHoverColor: 'hover:border-pink-500',
+			primaryHoverColor: 'hover:bg-pink-400',
 			secondaryColor: 'border-violet-400',
-			secondaryHoverColor: 'hover:border-violet-500'
+			secondaryHoverColor: 'hover:bg-violet-400'
+		},
+		ring: {
+			primaryFocusColor: 'focus:ring-pink-400',
+			secondaryFocusColor: 'focus:ring-violet-400'
+		},
+		accent: {
+			primaryColor: 'accent-pink-400',
+			secondaryColor: 'accent-violet-400'
+		}
+	}
+};
+
+export const UNSELECTED_TYPE = {
+	name: UNSELECTED,
+	displayName: capitalizeFirstLetter(UNSELECTED),
+	styles: {
+		bg: {
+			primaryColor: 'bg-red-500',
+			primaryHoverColor: 'hover:bg-lime-500',
+			secondaryColor: 'bg-yellow-400',
+			secondaryHoverColor: 'hover:bg-orange-500'
+		},
+		text: {
+			primaryColor: 'text-lime-500',
+			primaryHoverColor: 'hover:text-lime-600',
+			secondaryColor: 'text-orange-500',
+			secondaryHoverColor: 'hover:text-orange-600'
+		},
+		border: {
+			primaryColor: 'border-lime-500',
+			primaryHoverColor: 'hover:bg-lime-500',
+			secondaryColor: 'border-orange-500',
+			secondaryHoverColor: 'hover:bg-orange-500'
+		},
+		ring: {
+			primaryFocusColor: 'focus:ring-red-500',
+			secondaryFocusColor: 'focus:ring-yellow-400'
+		},
+		accent: {
+			primaryColor: 'accent-lime-500',
+			secondaryColor: 'accent-orange-500'
 		}
 	}
 };
@@ -462,7 +637,8 @@ export const pokemonTypes: PokemonTypes = {
 	dragon: DRAGON_TYPE,
 	steel: STEEL_TYPE,
 	ice: ICE_TYPE,
-	fairy: FAIRY_TYPE
+	fairy: FAIRY_TYPE,
+	unselected: UNSELECTED_TYPE
 };
 
 export const pokemonTypesList: PokemonTypeListItem[] = [
@@ -482,5 +658,6 @@ export const pokemonTypesList: PokemonTypeListItem[] = [
 	DRAGON_TYPE,
 	STEEL_TYPE,
 	ICE_TYPE,
-	FAIRY_TYPE
+	FAIRY_TYPE,
+	UNSELECTED_TYPE
 ];
