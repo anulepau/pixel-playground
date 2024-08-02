@@ -24,7 +24,7 @@ export const DRAGON = 'dragon';
 export const STEEL = 'steel';
 export const ICE = 'ice';
 export const FAIRY = 'fairy';
-export const UNSELECTED = 'unselected';
+export const DEFAULT = 'default';
 
 export const NORMAL_TYPE = {
 	name: NORMAL,
@@ -587,9 +587,9 @@ export const FAIRY_TYPE = {
 	}
 };
 
-export const UNSELECTED_TYPE = {
-	name: UNSELECTED,
-	displayName: capitalizeFirstLetter(UNSELECTED),
+export const DEFAULT_TYPE = {
+	name: DEFAULT,
+	displayName: capitalizeFirstLetter(DEFAULT),
 	styles: {
 		bg: {
 			primaryColor: 'bg-red-500',
@@ -638,7 +638,7 @@ export const pokemonTypes: PokemonTypes = {
 	steel: STEEL_TYPE,
 	ice: ICE_TYPE,
 	fairy: FAIRY_TYPE,
-	unselected: UNSELECTED_TYPE
+	default: DEFAULT_TYPE
 };
 
 export const pokemonTypesList: PokemonTypeListItem[] = [
@@ -659,5 +659,5 @@ export const pokemonTypesList: PokemonTypeListItem[] = [
 	STEEL_TYPE,
 	ICE_TYPE,
 	FAIRY_TYPE,
-	UNSELECTED_TYPE
+	DEFAULT_TYPE
 ];
