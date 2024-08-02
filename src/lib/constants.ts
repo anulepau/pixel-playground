@@ -23,221 +23,425 @@ export const FAIRY = 'fairy';
 export const NORMAL_TYPE = {
 	name: NORMAL,
 	displayName: capitalizeFirstLetter(NORMAL),
-	primaryColor: {
-		twLevel: 'stone-500',
-		bg: 'bg-stone-500'
-	},
-	secondaryColor: {
-		twLevel: 'gray-400',
-		bg: 'bg-gray-400'
+	styles: {
+		bg: {
+			primaryColor: 'bg-stone-500',
+			primaryHoverColor: 'hover:bg-stone-600',
+			secondaryColor: 'bg-gray-400',
+			secondaryHoverColor: 'hover:bg-gray-500'
+		},
+		text: {
+			primaryColor: 'text-stone-500',
+			primaryHoverColor: 'hover:text-stone-600',
+			secondaryColor: 'text-gray-400',
+			secondaryHoverColor: 'hover:text-gray-500'
+		},
+		border: {
+			primaryColor: 'stone-500',
+			primaryHoverColor: 'hover:stone-600',
+			secondaryColor: 'gray-400',
+			secondaryHoverColor: 'hover:gray-500'
+		}
 	}
 };
 
 export const FIRE_TYPE = {
 	name: FIRE,
 	displayName: capitalizeFirstLetter(FIRE),
-	primaryColor: {
-		twLevel: 'red-600',
-		bg: 'bg-red-600'
-	},
-	secondaryColor: {
-		twLevel: 'orange-400',
-		bg: 'bg-orange-400'
+	styles: {
+		bg: {
+			primaryColor: 'bg-red-600',
+			primaryHoverColor: 'hover:bg-red-700',
+			secondaryColor: 'bg-orange-400',
+			secondaryHoverColor: 'hover:bg-orange-500'
+		},
+		text: {
+			primaryColor: 'text-red-600',
+			primaryHoverColor: 'hover:text-red-700',
+			secondaryColor: 'text-orange-400',
+			secondaryHoverColor: 'hover:text-orange-500'
+		},
+		border: {
+			primaryColor: 'border-red-600',
+			primaryHoverColor: 'hover:border-red-700',
+			secondaryColor: 'border-orange-400',
+			secondaryHoverColor: 'hover:border-orange-500'
+		}
 	}
 };
 
 export const WATER_TYPE = {
 	name: WATER,
 	displayName: capitalizeFirstLetter(WATER),
-	primaryColor: {
-		twLevel: 'cyan-500',
-		bg: 'bg-cyan-500'
-	},
-	secondaryColor: {
-		twLevel: 'teal-400',
-		bg: 'bg-teal-400'
+	styles: {
+		bg: {
+			primaryColor: 'bg-cyan-500',
+			primaryHoverColor: 'hover:bg-cyan-600',
+			secondaryColor: 'bg-teal-400',
+			secondaryHoverColor: 'hover:teal-500'
+		},
+		text: {
+			primaryColor: 'text-cyan-500',
+			primaryHoverColor: 'hover:text-cyan-600',
+			secondaryColor: 'text-teal-400',
+			secondaryHoverColor: 'hover:text-teal-500'
+		},
+		border: {
+			primaryColor: 'border-cyan-500',
+			primaryHoverColor: 'hover:border-cyan-600',
+			secondaryColor: 'border-teal-400',
+			secondaryHoverColor: 'hover:border-teal-500'
+		}
 	}
 };
 
 export const GRASS_TYPE = {
 	name: GRASS,
 	displayName: capitalizeFirstLetter(GRASS),
-	primaryColor: {
-		twLevel: 'green-500',
-		bg: 'bg-green-500'
-	},
-	secondaryColor: {
-		twLevel: 'rose-400',
-		bg: 'bg-rose-400'
+	styles: {
+		bg: {
+			primaryColor: 'bg-green-500',
+			primaryHoverColor: 'hover:bg-green-600',
+			secondaryColor: 'bg-rose-400',
+			secondaryHoverColor: 'hover:bg-rose-500'
+		},
+		text: {
+			primaryColor: 'text-green-500',
+			primaryHoverColor: 'hover:text-green-600',
+			secondaryColor: 'text-rose-400',
+			secondaryHoverColor: 'hover:text-rose-500'
+		},
+		border: {
+			primaryColor: 'border-green-500',
+			primaryHoverColor: 'hover:border-green-600',
+			secondaryColor: 'border-rose-400',
+			secondaryHoverColor: 'hover:border-rose-500'
+		}
 	}
 };
 
 export const FLYING_TYPE = {
 	name: FLYING,
 	displayName: capitalizeFirstLetter(FLYING),
-	primaryColor: {
-		twLevel: 'sky-300',
-		bg: 'bg-sky-300'
-	},
-	secondaryColor: {
-		twLevel: 'sky-500',
-		bg: 'bg-sky-500'
+	styles: {
+		bg: {
+			primaryColor: 'bg-sky-300',
+			primaryHoverColor: 'hover:bg-sky-400',
+			secondaryColor: 'bg-sky-500',
+			secondaryHoverColor: 'hover:bg-sky-600'
+		},
+		text: {
+			primaryColor: 'text-sky-300',
+			primaryHoverColor: 'hover:text-sky-400',
+			secondaryColor: 'text-sky-500',
+			secondaryHoverColor: 'hover:text-sky-500'
+		},
+		border: {
+			primaryColor: 'border-sky-300',
+			primaryHoverColor: 'hover:border-sky-300',
+			secondaryColor: 'border-sky-500',
+			secondaryHoverColor: 'hover:border-sky-500'
+		}
 	}
 };
 
 export const BUG_TYPE = {
 	name: BUG,
 	displayName: capitalizeFirstLetter(BUG),
-	primaryColor: {
-		twLevel: 'lime-400',
-		bg: 'bg-lime-400'
-	},
-	secondaryColor: {
-		twLevel: 'yellow-500',
-		bg: 'bg-yellow-500'
+	styles: {
+		bg: {
+			primaryColor: 'bg-lime-400',
+			primaryHoverColor: 'hover:bg-lime-500',
+			secondaryColor: 'bg-yellow-500',
+			secondaryHoverColor: 'hover:bg-yellow-600'
+		},
+		text: {
+			primaryColor: 'text-lime-400',
+			primaryHoverColor: 'hover:text-lime-500',
+			secondaryColor: 'text-yellow-500',
+			secondaryHoverColor: 'hover:text-yellow-600'
+		},
+		border: {
+			primaryColor: 'border-lime-400',
+			primaryHoverColor: 'hover:border-lime-500',
+			secondaryColor: 'border-yellow-500',
+			secondaryHoverColor: 'hover:border-yellow-600'
+		}
 	}
 };
 
 export const ELECTRIC_TYPE = {
 	name: ELECTRIC,
 	displayName: capitalizeFirstLetter(ELECTRIC),
-	primaryColor: {
-		twLevel: 'yellow-500',
-		bg: 'bg-yellow-500'
-	},
-	secondaryColor: {
-		twLevel: 'amber-400',
-		bg: 'bg-amber-400'
+	styles: {
+		bg: {
+			primaryColor: 'bg-yellow-500',
+			primaryHoverColor: 'hover:bg-yellow-600',
+			secondaryColor: 'bg-amber-400',
+			secondaryHoverColor: 'hover:bg-amber-500'
+		},
+		text: {
+			primaryColor: 'text-yellow-500',
+			primaryHoverColor: 'hover:text-yellow-600',
+			secondaryColor: 'text-amber-400',
+			secondaryHoverColor: 'hover:text-amber-500'
+		},
+		border: {
+			primaryColor: 'border-yellow-500',
+			primaryHoverColor: 'hover:border-yellow-600',
+			secondaryColor: 'border-amber-400',
+			secondaryHoverColor: 'hover:border-amber-500'
+		}
 	}
 };
 
 export const ROCK_TYPE = {
 	name: ROCK,
 	displayName: capitalizeFirstLetter(ROCK),
-	primaryColor: {
-		twLevel: 'stone-500',
-		bg: 'bg-stone-500'
-	},
-	secondaryColor: {
-		twLevel: 'lime-600',
-		bg: 'bg-lime-600'
+	styles: {
+		bg: {
+			primaryColor: 'bg-stone-500',
+			primaryHoverColor: 'hover:bg-stone-600',
+			secondaryColor: 'bg-lime-600',
+			secondaryHoverColor: 'hover:bg-lime-700'
+		},
+		text: {
+			primaryColor: 'text-stone-500',
+			primaryHoverColor: 'hover:text-stone-600',
+			secondaryColor: 'text-lime-600',
+			secondaryHoverColor: 'hover:text-lime-700'
+		},
+		border: {
+			primaryColor: 'border-stone-500',
+			primaryHoverColor: 'hover:border-stone-600',
+			secondaryColor: 'border-lime-600',
+			secondaryHoverColor: 'hover:border-lime-700'
+		}
 	}
 };
 
 export const GROUND_TYPE = {
 	name: GROUND,
 	displayName: capitalizeFirstLetter(GROUND),
-	primaryColor: {
-		twLevel: 'yellow-600',
-		bg: 'bg-yellow-600'
-	},
-	secondaryColor: {
-		twLevel: 'stone-400',
-		bg: 'bg-stone-400'
+	styles: {
+		bg: {
+			primaryColor: 'bg-yellow-600',
+			primaryHoverColor: 'hover:bg-yellow-700',
+			secondaryColor: 'bg-stone-400',
+			secondaryHoverColor: 'hover:bg-stone-500'
+		},
+		text: {
+			primaryColor: 'text-yellow-600',
+			primaryHoverColor: 'hover:text-yellow-700',
+			secondaryColor: 'text-stone-400',
+			secondaryHoverColor: 'hover:text-stone-500'
+		},
+		border: {
+			primaryColor: 'border-yellow-600',
+			primaryHoverColor: 'hover:border-yellow-700',
+			secondaryColor: 'border-stone-400',
+			secondaryHoverColor: 'hover:border-stone-500'
+		}
 	}
 };
 
 export const FIGHTING_TYPE = {
 	name: FIGHTING,
 	displayName: capitalizeFirstLetter(FIGHTING),
-	primaryColor: {
-		twLevel: 'amber-700',
-		bg: 'bg-amber-700'
-	},
-	secondaryColor: {
-		twLevel: 'blue-600',
-		bg: 'bg-blue-600'
+	styles: {
+		bg: {
+			primaryColor: 'bg-amber-700',
+			primaryHoverColor: 'hover:bg-amber-800',
+			secondaryColor: 'bg-blue-600',
+			secondaryHoverColor: 'hover:bg-blue-700'
+		},
+		text: {
+			primaryColor: 'text-amber-700',
+			primaryHoverColor: 'hover:text-amber-800',
+			secondaryColor: 'text-blue-600',
+			secondaryHoverColor: 'hover:text-blue-700'
+		},
+		border: {
+			primaryColor: 'border-amber-700',
+			primaryHoverColor: 'hover:border-amber-800',
+			secondaryColor: 'border-blue-600',
+			secondaryHoverColor: 'hover:border-blue-700'
+		}
 	}
 };
 
 export const PSYCHIC_TYPE = {
 	name: PSYCHIC,
 	displayName: capitalizeFirstLetter(PSYCHIC),
-	primaryColor: {
-		twLevel: 'pink-600',
-		bg: 'bg-pink-600'
-	},
-	secondaryColor: {
-		twLevel: 'fuchsia-400',
-		bg: 'bg-fuchsia-400'
+	styles: {
+		bg: {
+			primaryColor: 'bg-pink-600',
+			primaryHoverColor: 'hover:bg-pink-700',
+			secondaryColor: 'bg-fuchsia-400',
+			secondaryHoverColor: 'hover:bg-fuchsia-500'
+		},
+		text: {
+			primaryColor: 'text-pink-600',
+			primaryHoverColor: 'hover:text-pink-700',
+			secondaryColor: 'text-fuchsia-400',
+			secondaryHoverColor: 'hover:text-fuchsia-500'
+		},
+		border: {
+			primaryColor: 'border-pink-600',
+			primaryHoverColor: 'hover:border-pink-700',
+			secondaryColor: 'border-fuchsia-400',
+			secondaryHoverColor: 'hover:border-fuchsia-500'
+		}
 	}
 };
 
 export const GHOST_TYPE = {
 	name: GHOST,
 	displayName: capitalizeFirstLetter(GHOST),
-	primaryColor: {
-		twLevel: 'violet-700',
-		bg: 'bg-violet-700'
-	},
-	secondaryColor: {
-		twLevel: 'purple-400',
-		bg: 'bg-purple-400'
+	styles: {
+		bg: {
+			primaryColor: 'bg-violet-700',
+			primaryHoverColor: 'hover:bg-violet-800',
+			secondaryColor: 'bg-purple-400',
+			secondaryHoverColor: 'hover:bg-purple-500'
+		},
+		text: {
+			primaryColor: 'text-violet-700',
+			primaryHoverColor: 'hover:text-violet-800',
+			secondaryColor: 'text-purple-400',
+			secondaryHoverColor: 'hover:text-purple-500'
+		},
+		border: {
+			primaryColor: 'border-violet-700',
+			primaryHoverColor: 'hover:border-violet-800',
+			secondaryColor: 'border-purple-400',
+			secondaryHoverColor: 'hover:border-purple-500'
+		}
 	}
 };
 
 export const DARK_TYPE = {
 	name: DARK,
 	displayName: capitalizeFirstLetter(DARK),
-	primaryColor: {
-		twLevel: 'indigo-700',
-		bg: 'bg-indigo-700'
-	},
-	secondaryColor: {
-		twLevel: 'zinc-600',
-		bg: 'bg-zinc-600'
+	styles: {
+		bg: {
+			primaryColor: 'bg-indigo-700',
+			primaryHoverColor: 'hover:bg-indigo-800',
+			secondaryColor: 'bg-zinc-600',
+			secondaryHoverColor: 'hover:bg-zinc-700'
+		},
+		text: {
+			primaryColor: 'text-indigo-700',
+			primaryHoverColor: 'hover:text-indigo-800',
+			secondaryColor: 'text-zinc-600',
+			secondaryHoverColor: 'hover:text-zinc-700'
+		},
+		border: {
+			primaryColor: 'border-indigo-700',
+			primaryHoverColor: 'hover:border-indigo-800',
+			secondaryColor: 'border-zinc-600',
+			secondaryHoverColor: 'hover:border-zinc-700'
+		}
 	}
 };
 
 export const DRAGON_TYPE = {
 	name: DRAGON,
 	displayName: capitalizeFirstLetter(DRAGON),
-	primaryColor: {
-		twLevel: 'indigo-400',
-		bg: 'bg-indigo-400'
-	},
-	secondaryColor: {
-		twLevel: 'orange-400',
-		bg: 'bg-orange-400'
+	styles: {
+		bg: {
+			primaryColor: 'bg-indigo-400',
+			primaryHoverColor: 'hover:bg-indigo-500',
+			secondaryColor: 'bg-orange-400',
+			secondaryHoverColor: 'hover:bg-orange-500'
+		},
+		text: {
+			primaryColor: 'text-indigo-400',
+			primaryHoverColor: 'hover:text-indigo-500',
+			secondaryColor: 'text-orange-400',
+			secondaryHoverColor: 'hover:text-orange-500'
+		},
+		border: {
+			primaryColor: 'border-indigo-400',
+			primaryHoverColor: 'hover:border-indigo-500',
+			secondaryColor: 'border-range-400',
+			secondaryHoverColor: 'hover:border-orange-500'
+		}
 	}
 };
 
 export const STEEL_TYPE = {
 	name: STEEL,
 	displayName: capitalizeFirstLetter(STEEL),
-	primaryColor: {
-		twLevel: 'slate-500',
-		bg: 'bg-slate-500'
-	},
-	secondaryColor: {
-		twLevel: 'blue-400',
-		bg: 'bg-blue-400'
+	styles: {
+		bg: {
+			primaryColor: 'bg-slate-500',
+			primaryHoverColor: 'hover:bg-slate-600',
+			secondaryColor: 'bg-blue-400',
+			secondaryHoverColor: 'hover:bg-blue-500'
+		},
+		text: {
+			primaryColor: 'text-slate-500',
+			primaryHoverColor: 'hover:text-slate-600',
+			secondaryColor: 'text-blue-400',
+			secondaryHoverColor: 'hover:text-blue-500'
+		},
+		border: {
+			primaryColor: 'border-slate-500',
+			primaryHoverColor: 'hover:border-slate-600',
+			secondaryColor: 'border-blue-400',
+			secondaryHoverColor: 'hover:border-blue-500'
+		}
 	}
 };
 
 export const ICE_TYPE = {
 	name: ICE,
 	displayName: capitalizeFirstLetter(ICE),
-	primaryColor: {
-		twLevel: 'blue-300',
-		bg: 'bg-blue-300'
-	},
-	secondaryColor: {
-		twLevel: 'indigo-500',
-		bg: 'bg-indigo-500'
+	styles: {
+		bg: {
+			primaryColor: 'bg-blue-300',
+			primaryHoverColor: 'hover:bg-blue-400',
+			secondaryColor: 'bg-indigo-500',
+			secondaryHoverColor: 'hover:bg-indigo-600'
+		},
+		text: {
+			primaryColor: 'text-blue-300',
+			primaryHoverColor: 'hover:text-blue-400',
+			secondaryColor: 'text-indigo-500',
+			secondaryHoverColor: 'hover:text-indigo-600'
+		},
+		border: {
+			primaryColor: 'border-blue-300',
+			primaryHoverColor: 'hover:border-blue-400',
+			secondaryColor: 'border-indigo-500',
+			secondaryHoverColor: 'hover:border-indigo-600'
+		}
 	}
 };
 
 export const FAIRY_TYPE = {
 	name: FAIRY,
 	displayName: capitalizeFirstLetter(FAIRY),
-	primaryColor: {
-		twLevel: 'pink-400',
-		bg: 'bg-pink-400'
-	},
-	secondaryColor: {
-		twLevel: 'violet-400',
-		bg: 'bg-violet-400'
+	styles: {
+		bg: {
+			primaryColor: 'bg-pink-400',
+			primaryHoverColor: 'hover:bg-pink-500',
+			secondaryColor: 'bg-violet-400',
+			secondaryHoverColor: 'hover:bg-violet-500'
+		},
+		text: {
+			primaryColor: 'text-pink-400',
+			primaryHoverColor: 'hover:text-pink-500',
+			secondaryColor: 'text-violet-400',
+			secondaryHoverColor: 'hover:text-violet-500'
+		},
+		border: {
+			primaryColor: 'border-pink-400',
+			primaryHoverColor: 'hover:border-pink-500',
+			secondaryColor: 'border-violet-400',
+			secondaryHoverColor: 'hover:border-violet-500'
+		}
 	}
 };
 
@@ -280,5 +484,3 @@ export const pokemonTypesList: PokemonTypeListItem[] = [
 	ICE_TYPE,
 	FAIRY_TYPE
 ];
-
-export const displayTypesList: string[] = pokemonTypesList.map((type) => type.displayName);

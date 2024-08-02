@@ -26,127 +26,99 @@ h6 {
 	@apply text-base;
 }
 
-.dark {
-	@apply text-white;
+@layer base {
+	select {
+		@apply border-solid border border-gray-900 rounded-md;
+	}
+
+	button,
+	.btn {
+		@apply bg-gray-200;
+		@apply text-gray-900;
+		border: 2px solid transparent;
+		border-radius: 0.5rem;
+		padding: 0.25rem 0.75rem;
+		font-size: 18px;
+		text-decoration: none;
+		width: fit-content;
+		height: fit-content;
+	}
+
+	button:hover,
+	.btn:hover {
+		@apply bg-gray-400;
+		transition: 0.2s;
+		cursor: pointer;
+	}
+
+	.btn-primary,
+	.btn-secondary {
+		color: white;
+	}
+
+	.btn-outline {
+		@apply bg-transparent;
+		@apply text-gray-900;
+		@apply border-solid border-2 border-gray-900;
+	}
+
+	.btn-outline:hover {
+		@apply bg-gray-900;
+		@apply text-white;
+	}
+
+	.btn-disabled {
+		@apply bg-gray-300;
+		@apply text-white;
+		pointer-events: none;
+	}
+
+	.style-card {
+		@apply border border-solid border-gray-300;
+	}
+
+	.style-card:hover {
+		@apply border-gray-900;
+		transition: 0.2s;
+	}
 }
 
-.dark select {
-	@apply bg-transparent;
-	@apply text-gray-50;
-	@apply border-solid border border-gray-50 rounded-md;
+@layer components {
 }
 
-select {
-	@apply border-solid border border-gray-900 rounded-md;
-}
+@layer utilities {
+	.dark {
+		@apply text-white;
+	}
 
-button,
-.btn {
-	@apply bg-gray-200;
-	@apply text-gray-900;
-	border: 2px solid transparent;
-	border-radius: 0.5rem;
-	padding: 0.25rem 0.75rem;
-	font-size: 18px;
-	text-decoration: none;
-	width: fit-content;
-	height: fit-content;
-}
+	.dark select {
+		@apply bg-transparent;
+		@apply text-gray-50;
+		@apply border-solid border border-gray-50 rounded-md;
+	}
 
-button:hover,
-.btn:hover {
-	@apply bg-gray-400;
-	transition: 0.2s;
-	cursor: pointer;
-}
+	.dark .btn-outline {
+		@apply bg-transparent;
+		@apply text-white;
+		@apply border-solid border-2 border-gray-50;
+	}
 
-.btn-outline {
-	@apply bg-transparent;
-	@apply text-gray-900;
-	@apply border-solid border-2 border-gray-900;
-}
+	.dark .btn-outline:hover {
+		@apply bg-gray-50;
+		@apply text-gray-900;
+	}
 
-.dark .btn-outline {
-	@apply bg-transparent;
-	@apply text-white;
-	@apply border-solid border-2 border-gray-50;
-}
+	.dark .style-card {
+		@apply border border-solid border-gray-700;
+	}
 
-.btn-outline:hover {
-	@apply bg-gray-900;
-	@apply text-white;
-}
+	.dark .style-card:hover {
+		@apply border-gray-50;
+	}
 
-.dark .btn-outline:hover {
-	@apply bg-gray-50;
-	@apply text-gray-900;
-}
-
-.btn-primary {
-	@apply bg-pink-400;
-	@apply text-white;
-}
-
-.btn-primary:hover {
-	@apply bg-pink-500;
-}
-
-.btn-primary-outline {
-	@apply bg-transparent;
-	@apply text-pink-400;
-	@apply border-solid border-2 border-pink-400;
-}
-
-.btn-primary-outline:hover {
-	@apply bg-pink-400;
-	@apply text-white;
-}
-
-.btn-secondary {
-	@apply bg-violet-400;
-	@apply text-white;
-}
-
-.btn-secondary:hover {
-	@apply bg-violet-500;
-}
-
-.btn-secondary-outline {
-	@apply bg-transparent;
-	@apply text-violet-400;
-	@apply border-solid border-2 border-violet-400;
-}
-
-.btn-secondary-outline:hover {
-	@apply bg-violet-400;
-	@apply text-white;
-}
-
-.btn-disabled {
-	@apply bg-gray-300;
-	@apply text-white;
-	pointer-events: none;
-}
-
-.dark .btn-disabled {
-	@apply bg-gray-700;
-	@apply text-gray-500;
-	pointer-events: none;
-}
-
-.style-card {
-	@apply border border-solid border-gray-300;
-}
-
-.style-card:hover {
-	@apply border-gray-900;
-	transition: 0.2s;
-}
-
-.dark .style-card {
-	@apply border border-solid border-gray-700;
-}
-
-.dark .style-card:hover {
-	@apply border-gray-50;
+	.dark .btn-disabled {
+		@apply bg-gray-700;
+		@apply text-gray-500;
+		pointer-events: none;
+	}
 }
