@@ -8,8 +8,8 @@
 		pokemonTypesList
 	} from '$lib/constants';
 	import { currPokemonType } from '$lib/stores';
-	import type { ChangeEventHandler } from 'svelte/elements';
 	import { capitalizeFirstLetter } from '../../utils/helpers';
+	import type { ChangeEventHandler } from 'svelte/elements';
 
 	let darkMode: boolean = false;
 	let selectedTheme: string = SYSTEM_THEME;
