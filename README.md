@@ -6,14 +6,15 @@ a Web 2.0 experience | (unofficial) virtual landing page for your Pokémon journ
 
 TBA
 
-## main todo
+## main tasks
 
-- component library (button, dropdown, label/input, headings, tooltips)
+- component library: badge, input, radio, checkbox, range, card, text?, dropdown, toggle
+- navigation bar
 - interface skeleton
 - cursor trail
 - features: chatroom (websocket server), Pokémon team selection, journal
 
-## other todo
+## other tasks
 
 - style dropdown (select > option)
 

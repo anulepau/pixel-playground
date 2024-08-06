@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -28,7 +29,7 @@
 	h6 p,
 	span {
 		@apply text-base;
-		@apply font-sans;
+		font-family: 'Mulish', sans-serif;
 		font-optical-sizing: auto;
 		font-weight: normal;
 		font-style: normal;
@@ -91,8 +92,8 @@
 	.btn {
 		@apply bg-slate-200;
 		@apply text-slate-900;
+		@apply rounded-xl;
 		border: 2px solid transparent;
-		border-radius: 0.5rem;
 		padding: 0.25rem 0.75rem;
 		font-size: 18px;
 		text-decoration: none;
@@ -107,26 +108,36 @@
 		cursor: pointer;
 	}
 
+	button:disabled,
+	.btn:disabled {
+		@apply bg-slate-300;
+		@apply text-white;
+		pointer-events: none;
+	}
+
 	.btn-primary,
 	.btn-secondary {
 		color: white;
 	}
 
-	.btn-outline {
+	.btn-outline-default {
 		@apply bg-transparent;
 		@apply text-slate-900;
 		@apply border-2 border-solid border-slate-900;
 	}
 
-	.btn-outline:hover {
+	.btn-outline-default:hover {
 		@apply bg-slate-900;
 		@apply text-white;
 	}
 
-	.btn-disabled {
-		@apply bg-slate-300;
+	.btn-outline {
+		@apply bg-transparent;
+		@apply border-2 border-solid;
+	}
+
+	.btn-outline:hover {
 		@apply text-white;
-		pointer-events: none;
 	}
 
 	.style-card {
@@ -186,7 +197,8 @@
 		@apply border-slate-50;
 	}
 
-	.dark .btn-disabled {
+	.dark button:disabled,
+	.dark .btn:disabled {
 		@apply bg-slate-700;
 		@apply text-slate-500;
 		pointer-events: none;

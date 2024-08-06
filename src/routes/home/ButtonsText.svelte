@@ -1,43 +1,57 @@
 <script>
 	import { currPokemonType } from '$lib/stores';
+	import { goto } from '$app/navigation';
+	import Button from '$lib/components/Button/Button.svelte';
+
+	const handleExitClick = () => {
+		goto('/');
+	};
 </script>
 
 <article class="flex flex-col gap-4 p-4 rounded-lg style-card">
 	<span class="subheading">Buttons | Text</span>
-	<a class="btn" href="/">Exit</a>
-	<a class="btn btn-outline-default" href="/">Exit Outline</a>
-	<a
-		class={`btn btn-primary 
+	<Button buttonText={'Exit'} onClick={handleExitClick} />
+	<Button
+		buttonText={'Exit Outline'}
+		classValues={`btn-outline-default`}
+		onClick={handleExitClick}
+	/>
+	<Button
+		buttonText={'Exit Primary'}
+		classValues={`btn btn-primary 
       ${$currPokemonType.styles.bg.primaryColor} 
       ${$currPokemonType.styles.bg.primaryHoverColor}`}
-		href="/">Exit Primary</a
-	>
-	<a
-		class={`btn btn-outline
+		onClick={handleExitClick}
+	/>
+	<Button
+		buttonText={'Exit Primary Outline'}
+		classValues={`btn btn-outline
       ${$currPokemonType.styles.text.primaryColor} 
       ${$currPokemonType.styles.border.primaryColor} 
       ${$currPokemonType.styles.border.primaryHoverColor}`}
-		href="/">Exit Primary Outline</a
-	>
-	<a
-		class={`btn btn-secondary 
+		onClick={handleExitClick}
+	/>
+	<Button
+		buttonText={'Exit Primary'}
+		classValues={`btn btn-secondary 
       ${$currPokemonType.styles.bg.secondaryColor} 
       ${$currPokemonType.styles.bg.secondaryHoverColor}`}
-		href="/">Exit Secondary</a
-	>
-	<a
-		class={`btn btn-outline 
+		onClick={handleExitClick}
+	/>
+	<Button
+		buttonText={'Exit Secondary Outline'}
+		classValues={`btn btn-outline 
       ${$currPokemonType.styles.text.secondaryColor} 
       ${$currPokemonType.styles.border.secondaryColor} 
       ${$currPokemonType.styles.border.secondaryHoverColor}`}
-		href="/">Exit Secondary Outline</a
-	>
-	<a class="btn btn-disabled" href="/">Exit Disabled</a>
+		onClick={handleExitClick}
+	/>
+	<Button buttonText={'Exit Disabled'} onClick={handleExitClick} disabled />
 
 	<hr />
 
 	<span class="note">Note</span>
-	<span class="label">Labels</span>
+	<span class="label">Label</span>
 	<span>Default</span>
 	<span class="subheading">Subheading</span>
 	<span class="heading">Heading</span>

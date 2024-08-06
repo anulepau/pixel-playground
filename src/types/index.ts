@@ -14,6 +14,12 @@ export type PokemonTypeListItem = {
 			secondaryColor: string;
 			secondaryHoverColor: string;
 		};
+		border: {
+			primaryColor: string;
+			primaryHoverColor: string;
+			secondaryColor: string;
+			secondaryHoverColor: string;
+		};
 		ring: {
 			primaryFocusColor: string;
 			secondaryFocusColor: string;
