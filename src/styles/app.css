@@ -25,8 +25,7 @@
 	h3,
 	h4,
 	h5,
-	h6
-	p,
+	h6 p,
 	span {
 		@apply text-base;
 		@apply font-sans;
@@ -54,7 +53,8 @@
 		@apply text-xs;
 	}
 
-	label, .label {
+	label,
+	.label {
 		@apply text-sm;
 	}
 
@@ -158,15 +158,24 @@
 		@apply border border-solid border-slate-50 rounded-md;
 	}
 
-	.dark .btn-outline {
+	.dark .btn-outline-default {
 		@apply bg-transparent;
 		@apply text-white;
 		@apply border-2 border-solid border-slate-50;
 	}
 
-	.dark .btn-outline:hover {
+	.dark .btn-outline-default:hover {
 		@apply bg-gray-50;
 		@apply text-gray-900;
+	}
+
+	.dark .btn-outline {
+		@apply bg-transparent;
+		@apply border-2 border-solid;
+	}
+
+	.dark .btn-outline:hover {
+		@apply text-white;
 	}
 
 	.dark .style-card {

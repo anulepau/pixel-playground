@@ -19,7 +19,7 @@ TBA
 
 ## issues
 
-- primary / secondary outline buttons reset colors in darkmode
+N/A
 
 ## developing
 
