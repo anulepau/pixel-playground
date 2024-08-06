@@ -3,17 +3,7 @@
 </script>
 
 <article class="flex flex-col gap-4 p-4 rounded-lg style-card">
-	<span class="text-xl font-medium">Text</span>
-	<span class="text-xs">(xs) Note</span>
-	<span class="text-sm">(sm) Labels</span>
-	<span class="text-base">(base) Default</span>
-	<span class="text-xl">(xl) Subheadings</span>
-	<span class="text-2xl">(2xl) Headings</span>
-
-	<hr />
-
-	<span class="text-xl font-medium">Buttons</span>
-	<span>{$currPokemonType.displayName}</span>
+	<span class="subheading">Buttons | Text</span>
 	<a class="btn" href="/">Exit</a>
 	<a class="btn btn-outline" href="/">Exit Outline</a>
 	<a
@@ -43,4 +33,13 @@
 		href="/">Exit Secondary Outline</a
 	>
 	<a class="btn btn-disabled" href="/">Exit Disabled</a>
+
+	<hr />
+
+	<span class="note">Note</span>
+	<span class="label">Labels</span>
+	<span>Default</span>
+	<span class="subheading">Subheading</span>
+	<span class="heading">Heading</span>
+	<span class="title">Title</span>
 </article>

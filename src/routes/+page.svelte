@@ -5,7 +5,7 @@
 <div class="flex flex-row w-full h-screen justify-center items-center">
 	<div class="px-4 py-5 rounded-xl {$currPokemonType.styles.bg.secondaryColor}">
 		<a
-			class={`enter-btn btn btn-primary ${$currPokemonType.styles.bg.primaryColor} ${$currPokemonType.styles.bg.primaryHoverColor}`}
+			class={`title enter-btn btn btn-primary ${$currPokemonType.styles.bg.primaryColor} ${$currPokemonType.styles.bg.primaryHoverColor}`}
 			data-sveltekit-preload-data="tap"
 			href="/home"
 		>

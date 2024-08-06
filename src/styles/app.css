@@ -20,28 +20,41 @@
 	div,
 	button,
 	input,
-	p,
-	span,
 	h1,
 	h2,
 	h3,
 	h4,
 	h5,
-	h6 {
-		font-family: 'Playpen Sans', cursive;
+	h6
+	p,
+	span {
+		@apply text-base;
+		@apply font-sans;
 		font-optical-sizing: auto;
 		font-weight: normal;
 		font-style: normal;
-		@apply text-base;
 	}
 
-	select {
-		@apply border border-solid border-slate-900 rounded-md;
-		@apply py-1 px-2;
-		@apply focus:outline-slate-600 active:outline-slate-600;
+	.subheading {
+		@apply text-xl font-medium;
+		font-family: 'Playpen Sans', cursive;
 	}
 
-	label {
+	.heading {
+		@apply text-2xl font-medium;
+		font-family: 'Playpen Sans', cursive;
+	}
+
+	.title {
+		@apply text-3xl font-medium;
+		font-family: 'Playpen Sans', cursive;
+	}
+
+	.note {
+		@apply text-xs;
+	}
+
+	label, .label {
 		@apply text-sm;
 	}
 
@@ -66,6 +79,12 @@
 	input[type='checkbox'] + label {
 		@apply text-base;
 		@apply pl-1;
+	}
+
+	select {
+		@apply border border-solid border-slate-900 rounded-md;
+		@apply py-1 px-2;
+		@apply focus:outline-slate-600 active:outline-slate-600;
 	}
 
 	button,
