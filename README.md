@@ -6,6 +6,13 @@ a Web 2.0 experience | (unofficial) virtual landing page for your Pokémon journ
 
 TBA
 
+## issues
+
+- component types
+- svelte export types
+- TailwindCSS dynamic colors solution
+- style inconsistencies between browsers
+
 ## main tasks
 
 - component library: badge, input, radio, checkbox, range, card, text?, dropdown, toggle
@@ -17,10 +24,6 @@ TBA
 ## other tasks
 
 - style dropdown (select > option)
-
-## issues
-
-N/A
 
 ## developing
 
